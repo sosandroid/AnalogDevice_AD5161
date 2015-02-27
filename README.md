@@ -3,9 +3,9 @@ Arduino library for AD5161 I2C/SPI digital potentiometer
 
 	v1.0 - First release
 
-	This potentiometer has 256 steps, VDD 2,7-5,5V, exists with R=5K, 10K, 50K, 100K
+This potentiometer has 256 steps, VDD 2,7-5,5V, exists with R=5K, 10K, 50K, 100K
 
-	This device can be driven using either I2C or SPI buses. This library supports both busses.
+This device can be driven using either I2C or SPI buses. This library supports both busses.
 
 
 [AD5161](http://www.analog.com/static/imported-files/data_sheets/AD5161.pdf)'s Analog Device page.

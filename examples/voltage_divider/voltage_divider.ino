@@ -9,12 +9,13 @@
 	B pin linked to ground
 	Wiper linked to analog0 pin to read back the wiper position
 	
-	WARNING : in this example, the read wiper position is extrapolated from 2 non precise functions : AnalogRead and Map. This drive the read output to error up to 5 steps, espacially near the extreme positions. Please keep in mind also there is a not null R value at the step 0.
+	WARNING : in this example, the read wiper position is extrapolated from 2 non precise functions : AnalogRead and Map. This drive the read output to mismatch up to 4 steps, espacially near the extreme positions. Please keep in mind also there is a not null R value at the step 0.
 	This example only checks the library as working properly
 	
     @section  HISTORY
 
     v1.0 - First release
+	v1.0.1 - More comprehsensive object creation - using #define stuff
 */
 /**************************************************************************/
 
@@ -22,14 +23,17 @@
 #include <AnalogDevice_AD5161.h>
 #include <Wire.h>
 #include <SPI.h>
-#include <math.h>
+//#include <math.h>
 
+#define I2CMODE true
 #define CSPIN 13
 #define AD0 0
+#define NB_STEPS 255
+#define RVALUE 5000
 #define ANALOG_PIN 0
 
 //AD5161 object creation
-ANALOGDEVICE_AD5161 myPot(true, 0, 0, 255, 5000);
+ANALOGDEVICE_AD5161 myPot(I2CMODE, CSPIN, AD0, NB_STEPS, RVALUE);
 
 uint8_t lastposition;
 

@@ -10,6 +10,8 @@ This device can be driven using either I2C or SPI buses. This library supports b
 
 [AD5161](http://www.analog.com/static/imported-files/data_sheets/AD5161.pdf)'s Analog Device page.
 
+[![Buy me a coffee](./res/default-yellow.png)](https://www.buymeacoffee.com/ju9hJ8RqGk)
+
 ## Features ##
 - Move to a positon straight, by step or by step and time
 - Move by a differential value
